@@ -8,6 +8,9 @@ const shopRoutes = require('./routes/shop');
 
 const app = express();
 
+app.set('view engine', 'pug');
+app.set('views', 'views'); //not needed beacause the views dir is alredy default. For display of feature if dir changed.
+
 //middleware
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(express.static(path.join(__dirname, 'public')));
