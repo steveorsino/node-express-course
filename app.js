@@ -2,13 +2,16 @@ const express = require('express');
 const path = require('path');
 
 const bodyParser = require('body-parser');
+const expressHbs = require('express-handlebars');
 
 const adminData = require('./routes/admin');
 const shopRoutes = require('./routes/shop');
 
 const app = express();
 
-app.set('view engine', 'pug');
+app.engine('hbs', expressHbs({layoutsDir: 'views/layouts', defaultLayout: 'main-layout', extname: 'hbs'})); //thats the default but this is a demo
+//app.set('view engine', 'pug'); // if using pug
+app.set('view engine', 'hbs')
 app.set('views', 'views'); //not needed beacause the views dir is alredy default. For display of feature if dir changed.
 
 //middleware
