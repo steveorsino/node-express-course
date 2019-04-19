@@ -16,7 +16,7 @@ const app = express();
 
 //app.set('view engine', 'pug'); // if using pug
 
-app.set('view engine', 'hbs'); // if using handlebars
+//app.set('view engine', 'hbs'); // if using handlebars
 
 app.set('view engine', 'ejs'); //if using ejs
 app.set('views', 'views'); //not needed beacause the views dir is alredy default. For display of feature if dir changed.
