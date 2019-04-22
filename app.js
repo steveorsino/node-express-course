@@ -9,7 +9,6 @@ const errorController = require('./controllers/error');
 
 const app = express();
 
-
 app.set('view engine', 'ejs');
 app.set('views', 'views'); //not needed beacause the views dir is alredy default. For display of feature if dir changed.
 
